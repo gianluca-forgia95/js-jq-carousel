@@ -19,15 +19,28 @@ function prevImg() {
     imgAct.prev().addClass('active');
   }
 }
+function nextCircle() {
+var circleAct = $('.nav i.active');
+circleAct.removeClass('active');
+if ( circleAct.hasClass('last') == true) {
+ $('.nav i.first').addClass('active');
+} else {
+  circleAct.next().addClass('active');
+}
+}
 
-//variabili
+//variabili utili
  var $next =  $('.next');
  var $prev = $('.prev');
+
+
 
 //Click sul next
  $next.click(
    function () {
     nextImg();
+    nextCircle();
+
    }
 );
 

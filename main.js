@@ -19,14 +19,25 @@ function prevImg() {
     imgAct.prev().addClass('active');
   }
 }
+
 function nextCircle() {
-var circleAct = $('.nav i.active');
-circleAct.removeClass('active');
-if ( circleAct.hasClass('last') == true) {
- $('.nav i.first').addClass('active');
-} else {
-  circleAct.next().addClass('active');
+ var circleAct = $('.nav i.active');
+ circleAct.removeClass('active');
+  if ( circleAct.hasClass('last') == true) {
+    $('.nav i.first').addClass('active');
+   } else {
+    circleAct.next().addClass('active');
+   }
 }
+
+function prevCircle() {
+  var circleAct = $('.nav i.active');
+  circleAct.removeClass('active');
+  if ( circleAct.hasClass('first') == true) {
+   $('.nav i.last').addClass('active');
+  } else {
+    circleAct.prev().addClass('active');
+  }
 }
 
 //variabili utili
@@ -48,6 +59,7 @@ if ( circleAct.hasClass('last') == true) {
  $prev.click(
    function () {
      prevImg();
+     prevCircle();
    }
 );
 

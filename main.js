@@ -16,7 +16,13 @@ var $prev = $('.prev');
 
  $prev.click(
    function () {
-     
+     var imgAct = $('.images img.active');
+     imgAct.removeClass('active');
+     if ( imgAct.hasClass('first') == true ) {
+       $('.images img.last').addClass('active');
+     } else {
+       imgAct.prev().addClass('active');
+     }
    }
  );
 

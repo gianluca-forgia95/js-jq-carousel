@@ -1,5 +1,7 @@
 $( function () {
 //Funzioni utili
+
+//Next/Prev img functions
 function nextImg() {
   var imgAct = $('.images img.active');
   imgAct.removeClass('active');
@@ -20,6 +22,8 @@ function prevImg() {
   }
 }
 
+
+//Next/Prev circle functions
 function nextCircle() {
  var circleAct = $('.nav i.active');
  circleAct.removeClass('active');
@@ -39,6 +43,7 @@ function prevCircle() {
     circleAct.prev().addClass('active');
   }
 }
+
 
 //variabili utili
  var $next =  $('.next');

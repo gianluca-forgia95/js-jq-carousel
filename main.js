@@ -1,24 +1,25 @@
 $( function () {
-  //Variabili utili
-  var clickNext = $('.next');
-  var clickPrev = $('.prev');
-  var imgAct = $('img.active');
-
-  clickNext.click(
-    function () {
-    //Ptima tolgo la classe
+//Click su next
+var $next =  $('.next');
+var $prev = $('.prev');
+ $next.click(
+  function() {
+    var imgAct = $('.images img.active');
     imgAct.removeClass('active');
-    //Poi con next() la aggiungo per mostrare la successiva
-    imgAct.next().addClass('active');
+    if ( imgAct.hasClass('last') == true ) {
+      $('.images img.first').addClass('active');
+    } else {
+      imgAct.next().addClass('active');
     }
-  );
+  }
+ );
 
-
- clickPrev.click(
+ $prev.click(
    function () {
-
+     
    }
  );
+
 
 
 }

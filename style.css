@@ -25,7 +25,9 @@
     height: 100%;
 }
 .slider-wrapper .images img.active {
-    display: inline-block;
+  display: inline-block;
+  max-width: 900px;
+  margin: auto;
 }
 .prev, .next {
     position: absolute;
@@ -52,6 +54,7 @@
 }
 .nav > i {
     margin: 0 20px;
+    cursor: pointer;
 }
 .nav > i.active {
     color: blue;

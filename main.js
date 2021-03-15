@@ -23,6 +23,7 @@ function prevImg() {
 }
 
 
+
 //Next/Prev circle functions
 function nextCircle() {
  var circleAct = $('.nav i.active');
@@ -58,6 +59,7 @@ function prevCircle() {
     nextCircle();
 
    }
+  
 );
 
 //Click sul prev
@@ -67,6 +69,8 @@ function prevCircle() {
      prevCircle();
    }
 );
+//keydown
+
 
 
 
